@@ -63,6 +63,24 @@
     <ClInclude Include="Caracteristica.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Bandeira.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Superior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeleDura.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Armadura.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Faca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Espada.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Castelo.cpp">
@@ -103,6 +121,24 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files\Principal</Filter>
+    </ClCompile>
+    <ClCompile Include="Bandeira.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Superior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeleDura.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Armadura.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Faca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Espada.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

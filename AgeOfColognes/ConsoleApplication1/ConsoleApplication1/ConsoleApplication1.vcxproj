@@ -142,6 +142,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Armadura.h" />
+    <ClInclude Include="Bandeira.h" />
     <ClInclude Include="Caracteristica.h" />
     <ClInclude Include="Castelo.h" />
     <ClInclude Include="Celula.h" />
@@ -149,13 +151,19 @@
     <ClInclude Include="Comando.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Edificio.h" />
+    <ClInclude Include="Espada.h" />
+    <ClInclude Include="Faca.h" />
     <ClInclude Include="Mapa.h" />
     <ClInclude Include="Objeto.h" />
+    <ClInclude Include="PeleDura.h" />
     <ClInclude Include="Perfil.h" />
     <ClInclude Include="Ser.h" />
+    <ClInclude Include="Superior.h" />
     <ClInclude Include="Terreno.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Armadura.cpp" />
+    <ClCompile Include="Bandeira.cpp" />
     <ClCompile Include="Caracteristica.cpp" />
     <ClCompile Include="Castelo.cpp" />
     <ClCompile Include="Celula.cpp" />
@@ -163,11 +171,15 @@
     <ClCompile Include="Comando.cpp" />
     <ClCompile Include="Consola.cpp" />
     <ClCompile Include="Edificio.cpp" />
+    <ClCompile Include="Espada.cpp" />
+    <ClCompile Include="Faca.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mapa.cpp" />
     <ClCompile Include="Objeto.cpp" />
+    <ClCompile Include="PeleDura.cpp" />
     <ClCompile Include="Perfil.cpp" />
     <ClCompile Include="Ser.cpp" />
+    <ClCompile Include="Superior.cpp" />
     <ClCompile Include="Terreno.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
