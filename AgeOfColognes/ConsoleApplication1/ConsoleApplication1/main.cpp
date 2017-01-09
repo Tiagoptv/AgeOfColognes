@@ -68,6 +68,6 @@ void main() {
 	
 	//d.mkgame();
 
-	//O Nito é gay!!
+	//O Nito é muito gay!!
 	
 }
