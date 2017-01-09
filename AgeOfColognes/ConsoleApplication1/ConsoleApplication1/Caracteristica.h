@@ -6,8 +6,9 @@
 #include <iostream>
 using namespace std;
 
-class Caracteristica: public Ser{
+class Caracteristica{
 	int cid;
+	int custo, forca;
 public:
 	Caracteristica(int cid);
 
