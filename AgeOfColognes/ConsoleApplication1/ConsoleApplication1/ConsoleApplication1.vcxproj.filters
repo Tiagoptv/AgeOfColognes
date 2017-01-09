@@ -25,9 +25,6 @@
     <Filter Include="Source Files\Unidades">
       <UniqueIdentifier>{473465fe-7bfa-4431-9d23-f154d82e1033}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Unidades\Características">
-      <UniqueIdentifier>{ee1a6143-dbac-4ad7-a571-cc2e9ddc11b6}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Edificio.h">
@@ -84,6 +81,9 @@
     <ClInclude Include="Espada.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Agressao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Castelo.cpp">
@@ -125,23 +125,26 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files\Principal</Filter>
     </ClCompile>
-    <ClCompile Include="Armadura.cpp">
-      <Filter>Source Files\Unidades\Características</Filter>
-    </ClCompile>
     <ClCompile Include="Bandeira.cpp">
-      <Filter>Source Files\Unidades\Características</Filter>
-    </ClCompile>
-    <ClCompile Include="Espada.cpp">
-      <Filter>Source Files\Unidades\Características</Filter>
-    </ClCompile>
-    <ClCompile Include="Faca.cpp">
-      <Filter>Source Files\Unidades\Características</Filter>
-    </ClCompile>
-    <ClCompile Include="PeleDura.cpp">
-      <Filter>Source Files\Unidades\Características</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Superior.cpp">
-      <Filter>Source Files\Unidades\Características</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeleDura.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Armadura.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Faca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Espada.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Agressao.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

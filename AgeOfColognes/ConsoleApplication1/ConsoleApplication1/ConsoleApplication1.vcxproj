@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Agressao.h" />
     <ClInclude Include="Armadura.h" />
     <ClInclude Include="Bandeira.h" />
     <ClInclude Include="Caracteristica.h" />
@@ -162,6 +163,7 @@
     <ClInclude Include="Terreno.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Agressao.cpp" />
     <ClCompile Include="Armadura.cpp" />
     <ClCompile Include="Bandeira.cpp" />
     <ClCompile Include="Caracteristica.cpp" />

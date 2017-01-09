@@ -17,7 +17,7 @@ protected:
 public:
 	Caracteristica(string nome);
 
-	virtual void fazAtuaCena(Mapa *m) = 0;  // virtual pura- vai ser chamada pelos filhos e aqui é abstrato (nao faz sentido estar aqui)
+	virtual void fazAtuaCena(Mapa *m) = 0;  // virtual pura- vai ser chamada pelos filhos e aqui é abstrato
 
 	~Caracteristica();
 };
