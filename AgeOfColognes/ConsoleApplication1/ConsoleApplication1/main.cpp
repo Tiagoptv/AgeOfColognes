@@ -67,7 +67,5 @@ void main() {
 	d.mkperfil(nperfil);
 	
 	//d.mkgame();
-
-	//O Nito é muito gay!!
 	
 }
