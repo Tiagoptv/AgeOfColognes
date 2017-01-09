@@ -1,8 +1,12 @@
 #pragma once
-class Armadura
-{
+#include "Caracteristica.h"
+
+class Armadura: public Caracteristica{
 public:
-	Armadura();
+	Armadura(string nser);
+
+	void fazAtuaCena(Mapa *m);
+
 	~Armadura();
 };
 

@@ -2,7 +2,7 @@
 
 
 
-Caracteristica::Caracteristica(int cid){
+Caracteristica::Caracteristica(string nome): nome(nome){
 
 }
 

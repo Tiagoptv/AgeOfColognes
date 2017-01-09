@@ -69,6 +69,24 @@ void Mapa::imprimeMapa(){
 	}
 }
 
+bool Mapa::souSerColoniaJogador(string nome) {
+	switch (nome.at(0)) {
+	case 'a': return true;
+	case 'b':
+	case 'c':
+	case 'd':
+	default: return false;
+	}
+}
+
+Ser* Mapa::meuSer(string n) {
+	if (souSerColoniaJogador(n))
+		return colonias[0]->getUnidade(n);
+
+	int col = n.at(0) - '0' - 1; // " -'0' " para converter char para int e " -1 " para obter a posição da colonia no vetor ex. char c -> int 3 e posição = 3 - 1 = 2
+	return colonias[col]->getUnidade(n);
+}
+
 Mapa::~Mapa()
 {
 }

@@ -1,8 +1,13 @@
 #pragma once
-class Superior
-{
+#include "Caracteristica.h"
+
+class Superior: public Caracteristica{
 public:
-	Superior();
+	Superior(string nser);
+
+	void fazAtuaCena(Mapa *m);
+
+
 	~Superior();
 };
 

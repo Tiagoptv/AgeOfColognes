@@ -1,8 +1,12 @@
 #pragma once
-class PeleDura
-{
+#include "Caracteristica.h"
+
+class PeleDura:public Caracteristica{
 public:
-	PeleDura();
+	PeleDura(string nser);
+
+	void fazAtuaCena(Mapa *m);
+
 	~PeleDura();
 };
 

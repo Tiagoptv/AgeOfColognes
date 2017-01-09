@@ -29,6 +29,8 @@ public:
 	void adicionaSer(Ser *u);
 	void adicionaEdificio(Edificio &e);
 
+	Ser* getUnidade(string n);
+
 	~Colonia();
 };
 

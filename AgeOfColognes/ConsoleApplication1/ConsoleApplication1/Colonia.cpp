@@ -28,6 +28,14 @@ void Colonia::setMoedas(int num){
 	moedas = num;
 }
 
+Ser* Colonia::getUnidade(string n) {
+	for (unsigned int i = 0; i < seres.size(); i++)
+		if (seres[i]->getNome() == n)
+			return seres[i];
+
+	return NULL;
+}
+
 Colonia::~Colonia()
 {
 }

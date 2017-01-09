@@ -47,6 +47,10 @@ public:
 	void preencheMapa(int l, int c);
 	void imprimeMapa();
 
+	bool souSerColoniaJogador(string nome);
+
+	Ser* meuSer(string n);
+
 	//void removeCelula(vector<Celula*>)
 
 	~Mapa();

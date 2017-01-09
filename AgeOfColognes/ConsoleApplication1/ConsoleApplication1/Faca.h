@@ -1,8 +1,13 @@
 #pragma once
-class Faca
-{
+#include "Caracteristica.h"
+
+class Faca: public Caracteristica{
+
 public:
-	Faca();
+	Faca(string nser);
+
+	void fazAtuaCena(Mapa *m);
+
 	~Faca();
 };
 
