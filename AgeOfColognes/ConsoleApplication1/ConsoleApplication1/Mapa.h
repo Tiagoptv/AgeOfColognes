@@ -43,6 +43,7 @@ public:
 	Objeto* getUltimoObj(int i, int j);
 	Colonia* getColonia(char c);
 	vector <Colonia*> getColonias();
+	Objeto* getObjeto(string n, int x, int y);
 
 	void preencheMapa(int l, int c);
 	void imprimeMapa();

@@ -6,7 +6,7 @@ PeleDura::PeleDura(string nser) : Caracteristica(nser)
 {
 }
 
-void PeleDura::fazAtuaCena(Mapa *m) {
+void PeleDura::fazCaracteristica(Mapa *m) {
 	int defesa = m->meuSer(nome)->getDefesa();
 
 	defesa++;

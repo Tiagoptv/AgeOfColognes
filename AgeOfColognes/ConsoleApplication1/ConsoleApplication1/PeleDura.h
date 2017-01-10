@@ -5,7 +5,7 @@ class PeleDura:public Caracteristica{
 public:
 	PeleDura(string nser);
 
-	void fazAtuaCena(Mapa *m);
+	void fazCaracteristica(Mapa *m);
 
 	~PeleDura();
 };

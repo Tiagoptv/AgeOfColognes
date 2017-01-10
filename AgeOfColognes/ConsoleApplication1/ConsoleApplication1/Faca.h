@@ -6,7 +6,7 @@ class Faca: public Caracteristica{
 public:
 	Faca(string nser);
 
-	void fazAtuaCena(Mapa *m);
+	void fazCaracteristica(Mapa *m);
 
 	~Faca();
 };

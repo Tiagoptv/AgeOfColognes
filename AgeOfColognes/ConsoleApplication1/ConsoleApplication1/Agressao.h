@@ -1,8 +1,14 @@
 #pragma once
-class Agressao
-{
+#include "Caracteristica.h"
+
+class Agressao: public Caracteristica{
+	string nalvo;
+	vector<string> alvos;
 public:
-	Agressao();
+	Agressao(string nser);
+
+	string verificaSerProximo(Mapa *m);
+
 	~Agressao();
 };
 

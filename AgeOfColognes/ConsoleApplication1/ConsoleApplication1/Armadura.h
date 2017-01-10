@@ -5,7 +5,7 @@ class Armadura: public Caracteristica{
 public:
 	Armadura(string nser);
 
-	void fazAtuaCena(Mapa *m);
+	void fazCaracteristica(Mapa *m);
 
 	~Armadura();
 };

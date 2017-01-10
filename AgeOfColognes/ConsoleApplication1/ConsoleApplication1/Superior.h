@@ -5,7 +5,7 @@ class Superior: public Caracteristica{
 public:
 	Superior(string nser);
 
-	void fazAtuaCena(Mapa *m);
+	void fazCaracteristica(Mapa *m);
 
 
 	~Superior();

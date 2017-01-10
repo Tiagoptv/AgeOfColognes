@@ -39,6 +39,15 @@ Colonia* Mapa::getColonia(char c) {
 
 vector <Colonia*> Mapa::getColonias() { return colonias; }
 
+Objeto* Mapa::getObjeto(string n, int x, int y) {
+	for (unsigned int i; i < mapa[x][y].getCelula().size(); i++)
+		if (mapa[x][y].getCelula().at(i)->getNome() == n)
+			return mapa[x][y].getCelula().at(i);
+
+	return NULL;
+}
+
+
 void Mapa::preencheMapa(int l, int c) {
 	y = 0;
 	x = 0;

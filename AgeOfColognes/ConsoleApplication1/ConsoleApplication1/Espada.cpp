@@ -2,11 +2,11 @@
 
 
 
-Espada::Espada(string nser): Caracteristica(nser){
+Espada::Espada(string nser): bonus(true), nataques(0),Caracteristica(nser){
 
 }
 
-void Espada::fazAtuaCena(Mapa *m) {
+void Espada::fazCaracteristica(Mapa *m) {
 	setAtaque(m);
 }
 

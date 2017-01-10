@@ -7,7 +7,7 @@ class Espada: public Caracteristica{
 public:
 	Espada(string nser);
 
-	void fazAtuaCena(Mapa *m);
+	void fazCaracteristica(Mapa *m);
 
 	void setAtaque(Mapa *m);
 
