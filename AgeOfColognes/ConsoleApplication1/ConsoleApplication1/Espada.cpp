@@ -32,6 +32,11 @@ bool Espada::verificaBonusAtaque(Mapa *m) {
 	}
 }
 
+int Espada::getNataques() const
+{
+	return nataques;
+}
+
 Espada::~Espada()
 {
 }

@@ -5,9 +5,11 @@
 #include <string>
 #include <vector>
 #include <iostream>
+
 using namespace std;
 
 class Mapa;
+class Consola;
 
 class Caracteristica{
 protected:

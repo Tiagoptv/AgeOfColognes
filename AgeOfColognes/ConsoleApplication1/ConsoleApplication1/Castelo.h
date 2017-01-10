@@ -17,6 +17,8 @@ public:
 	~Castelo();
 
 	//void curarMalta
+
+	//void darResetNosContadoresDasCaracteristicas xD ex.espada, remedio...
 };
 
 #endif
