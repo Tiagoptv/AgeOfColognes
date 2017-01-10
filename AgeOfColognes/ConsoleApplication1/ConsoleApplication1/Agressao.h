@@ -1,8 +1,13 @@
 #pragma once
-class Agressao
+#include "Caracteristica.h"
+
+class Agressao: public Caracteristica 
 {
 public:
-	Agressao();
+	Agressao(string nser);
+
+	void Agressao::fazAtuaCena(Mapa *m);
+
 	~Agressao();
 };
 
