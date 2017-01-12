@@ -8,8 +8,6 @@ Walker::Walker(string nser): Caracteristica(nser)
 void Walker::fazAtuaCena(Mapa * m, Consola &c)
 {
 	int numRand, x, y;
-
-	srand(time(NULL));
 	
 	numRand = rand() % 8 + 1;
 
