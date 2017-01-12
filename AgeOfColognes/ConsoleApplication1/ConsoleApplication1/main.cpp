@@ -9,6 +9,10 @@
 #include <conio.h>
 #include "Comando.h"
 #include "Mapa.h"
+
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
 using namespace std;
 
 void main() {
@@ -17,6 +21,8 @@ void main() {
 	Terreno a(0, 0);
 	//Castelo f;
 	Ser b(6, 6, 5);
+
+	srand(time(NULL));
 
 	/*int i, j, k, l;
 
