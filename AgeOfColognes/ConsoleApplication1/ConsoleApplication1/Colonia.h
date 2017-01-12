@@ -23,6 +23,7 @@ public:
 	int getMoedas();
 	char getNome();
 	int getCor();
+	Ser* getSer(int id);
 
 	void setMoedas(int num);
 

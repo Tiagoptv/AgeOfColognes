@@ -25,6 +25,7 @@ bool Mapa::getAtivo()const { return ativo; }
 int Mapa::getLinhas()const { return linhas; }
 int Mapa::getColunas()const { return colunas; }
 Objeto* Mapa::getUltimoObj(int i, int j) { return mapa[i][j].getCelula().at(mapa[i][j].getCelula().size() - 1); }
+vector <Objeto*> Mapa::getMapaCelula(int l, int c) { return mapa[l][c].getCelula(); }
 
 Colonia* Mapa::getColonia(char c) {
 	int n;
@@ -45,6 +46,18 @@ Objeto* Mapa::getObjeto(string n, int x, int y) {
 			return mapa[x][y].getCelula().at(i);
 
 	return NULL;
+}
+
+
+int Mapa::extrairIdSer(string nome) {
+	int n1, n2;
+
+	n1 = nome.at(3) - '0';
+	n2 = nome.at(4) - '0';
+
+
+
+	return (n1 * 10) + n2;
 }
 
 
