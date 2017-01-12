@@ -8,7 +8,7 @@ class Agressao: public Caracteristica{
 public:
 	Agressao(string nser);
 
-	string verificaSerProximo(Mapa *m);
+	void verificaSerProximo(Mapa *m, vector<string> *alvos);
 
 	void fazCaracterística(Mapa *m);
 
