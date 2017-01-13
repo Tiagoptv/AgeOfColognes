@@ -9,7 +9,7 @@ public:
 
 	Walker(string nser);
 
-	void fazAtuaCena(Mapa *m, Consola &c);
+	void fazCaracteristica(Mapa *m, Consola &c);
 
 	~Walker();
 };

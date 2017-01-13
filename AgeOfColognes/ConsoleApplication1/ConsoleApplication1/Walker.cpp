@@ -5,7 +5,7 @@ Walker::Walker(string nser): Caracteristica(nser)
 {
 }
 
-void Walker::fazAtuaCena(Mapa * m, Consola &c)
+void Walker::fazCaracteristica(Mapa * m, Consola &c)
 {
 	int numRand, x, y;
 	
