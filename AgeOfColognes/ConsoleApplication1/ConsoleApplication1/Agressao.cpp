@@ -1,7 +1,7 @@
 #include "Agressao.h"
 
 
-Agressao::Agressao(string nser): Caracteristica(nser){
+Agressao::Agressao(string nser) : nataques(0), Caracteristica(nser) {
 
 }
 
@@ -43,6 +43,33 @@ void Agressao::fazCaracterística(Mapa *m) {
 		saudeinimigo = serinimigo->getSaude() - retirarHp;
 
 		serinimigo->setSaude(saudeinimigo);
+
+		nataques++;
+	}
+}
+
+int Agressao::getNataques() { return nataques; }
+
+bool Agressao::dentroCastelo(Mapa *m) {
+	vector <Objeto*> celula;
+	int l, c;
+
+	l = m->meuSer(nome)->getX();
+	c = m->meuSer(nome)->getY();
+
+	celula = m->getMapaCelula(l, c);
+
+	for (unsigned int i; i < celula.size(); i++) {
+		if (celula[i]->getNome().at(1) == 'e' && celula[i]->getNome().at(1) == 'c') //Verificar se é este o formato do nome de um castelo
+			return true;
+	}
+
+	return false;
+}
+
+void Agressao::resetNataques(Mapa *m) {
+	if (dentroCastelo(m)) {
+		nataques = 0;
 	}
 }
 
