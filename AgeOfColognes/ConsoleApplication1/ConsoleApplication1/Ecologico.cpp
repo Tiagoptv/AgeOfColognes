@@ -1,11 +1,12 @@
-#include "Agressao.h"
+#include "Ecologico.h"
 
 
-Agressao::Agressao(string nser) : Ataca(nser) {
 
+Ecologico::Ecologico(string nser) : Ataca(nser)
+{
 }
 
-void Agressao::verificaSerProximo(Mapa *m, vector<string> *alvos) {
+void Ecologico::verificaEdificioProximo(Mapa *m, vector <string> *alvos) {
 	vector <Objeto*> celula;
 	int l, c;
 
@@ -13,7 +14,7 @@ void Agressao::verificaSerProximo(Mapa *m, vector<string> *alvos) {
 	c = m->meuSer(nome)->getY();
 
 	for (int i = 0; i < 8; i++) {
-		switch (i) {
+		switch(i){
 		case 0: celula = m->getMapaCelula(l, c + 1); break;
 
 		case 1: celula = m->getMapaCelula(l, c - 1); break;
@@ -33,19 +34,19 @@ void Agressao::verificaSerProximo(Mapa *m, vector<string> *alvos) {
 
 
 		for (unsigned int j = 0; j < celula.size(); j++) {
-			if (celula[j]->getNome().at(0) != m->meuSer(nome)->getNome().at(0) && celula[j]->getNome().at(1) == 's') {
+				if (celula[j]->getNome().at(0) != m->meuSer(nome)->getNome().at(0) && celula[j]->getNome().at(1) == 'e') {
 				alvos->push_back(celula[j]->getNome());
 			}
 		}
 	}
 }
 
-void Agressao::fazCaracterística(Mapa *m) {
+void Ecologico::fazCaracterística(Mapa *m) {
 	Ser* serinimigo;
 	int retirarHp = m->meuSer(nome)->getAtaque();
 	int idinimigo, saudeinimigo;
-	
-	verificaSerProximo(m,&alvos);
+
+	verificaEdificioProximo(m, &alvos);
 
 	for (unsigned int i = 0; i < alvos.size(); i++) {
 		idinimigo = m->extrairId(alvos.at(i));
@@ -60,9 +61,9 @@ void Agressao::fazCaracterística(Mapa *m) {
 	}
 }
 
-int Agressao::getNataques() { return nataques; }
+int Ecologico::getNataques() { return nataques; }
 
-bool Agressao::dentroCastelo(Mapa *m) {
+bool Ecologico::dentroCastelo(Mapa *m) {
 	vector <Objeto*> celula;
 	int l, c;
 
@@ -79,12 +80,13 @@ bool Agressao::dentroCastelo(Mapa *m) {
 	return false;
 }
 
-void Agressao::resetNataques(Mapa *m) {
+void Ecologico::resetNataques(Mapa *m) {
 	if (dentroCastelo(m)) {
 		nataques = 0;
 	}
 }
 
-Agressao::~Agressao()
+
+Ecologico::~Ecologico()
 {
 }

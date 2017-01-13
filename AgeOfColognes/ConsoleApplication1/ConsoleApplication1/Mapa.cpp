@@ -49,13 +49,11 @@ Objeto* Mapa::getObjeto(string n, int x, int y) {
 }
 
 
-int Mapa::extrairIdSer(string nome) {
+int Mapa::extrairId(string nome) {
 	int n1, n2;
 
 	n1 = nome.at(3) - '0';
 	n2 = nome.at(4) - '0';
-
-
 
 	return (n1 * 10) + n2;
 }
