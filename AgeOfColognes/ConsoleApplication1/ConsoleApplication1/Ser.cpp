@@ -1,9 +1,11 @@
 #include "Ser.h"
 
-
+int Ser::idTotal = 1;
 
 Ser::Ser(){}
-Ser::Ser(int x, int y, int cor): Objeto(x,y,cor) {}
+Ser::Ser(int x, int y, int cor): id(idTotal), Objeto(x,y,cor) {
+	idTotal++;
+}
 
 int Ser::getID()const { return id; }
 int Ser::getSaude() { return saude; }

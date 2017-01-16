@@ -5,7 +5,7 @@ class Bandeira: public Caracteristica{
 public:
 	Bandeira(string nser);
 
-	void fazCaracteristica(Mapa *m);
+	void fazCaracteristica(Mapa *m, Ser* s);
 
 	~Bandeira();
 };

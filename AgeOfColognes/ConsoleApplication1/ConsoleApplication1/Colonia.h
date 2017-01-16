@@ -8,6 +8,7 @@
 #include <string>
 #include "Edificio.h"
 #include "Ser.h"
+//class Ser;
 
 class Colonia{
 	int nCastelos;
