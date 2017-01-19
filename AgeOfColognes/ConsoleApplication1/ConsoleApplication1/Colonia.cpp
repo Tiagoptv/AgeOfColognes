@@ -6,7 +6,7 @@ Colonia::Colonia(){}
 Colonia::Colonia(char n) {
 	nomePopulacao = n;
 	nCastelos = 1;
-	cor = 3; // ciano 
+	cor = 3; // ciano   
 }
 
 int Colonia::getMoedas() { return moedas; }
