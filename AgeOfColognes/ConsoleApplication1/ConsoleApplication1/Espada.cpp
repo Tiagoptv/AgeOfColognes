@@ -2,18 +2,18 @@
 
 
 
-Espada::Espada(string nser): bonus(true), nataques(0),Caracteristica(nser){
+Espada::Espada(string nser): bonus(true), Caracteristica(nser){
 
 }
 
-void Espada::fazCaracteristica(Mapa *m) {
-	setAtaque(m);
+void Espada::fazCaracteristica(Mapa *m, Agressao *a) {
+	setAtaque(m,a);
 }
 
-void Espada::setAtaque(Mapa *m) {
+void Espada::setAtaque(Mapa *m, Agressao *a) {
 	int ataque;
 
-	if (verificaBonusAtaque(m)) {
+	if (verificaBonusAtaque(m,a)) {
 		ataque = 3 + m->meuSer(nome)->getAtaque();
 		m->meuSer(nome)->setAtaque(ataque);
 	}
@@ -23,8 +23,8 @@ void Espada::setAtaque(Mapa *m) {
 	}
 }
 
-bool Espada::verificaBonusAtaque(Mapa *m) {
-	if (nataques < 3) {
+bool Espada::verificaBonusAtaque(Mapa *m, Agressao *a) {
+	if (getNataques(a) < 3) {
 		return true;
 	}
 	else {
@@ -32,10 +32,7 @@ bool Espada::verificaBonusAtaque(Mapa *m) {
 	}
 }
 
-int Espada::getNataques() const
-{
-	return nataques;
-}
+int Espada::getNataques(Agressao *a) { return a->getNataques(); }
 
 Espada::~Espada()
 {

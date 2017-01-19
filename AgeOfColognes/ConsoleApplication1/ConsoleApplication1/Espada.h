@@ -1,20 +1,20 @@
 #pragma once
 #include "Caracteristica.h"
+#include "Agressao.h"
 
 class Espada: public Caracteristica{
 	bool bonus;
-	int nataques;
 public:
 	Espada(string nser);
 
-	void fazCaracteristica(Mapa *m);
+	void fazCaracteristica(Mapa *m, Agressao *a);
 
 	//Funções de acesso
-	int getNataques()const;
+	int getNataques(Agressao *a);
 
-	void setAtaque(Mapa *m);
+	void setAtaque(Mapa *m, Agressao *a);
 
-	bool verificaBonusAtaque(Mapa *m);
+	bool verificaBonusAtaque(Mapa *m, Agressao *a);
 
 	
 

@@ -44,6 +44,9 @@ public:
 	Colonia* getColonia(char c);
 	vector <Colonia*> getColonias();
 	Objeto* getObjeto(string n, int x, int y);
+	vector <Objeto*> getMapaCelula(int l, int c);
+
+	int extrairId(string nome);
 
 	void preencheMapa(int l, int c);
 	void imprimeMapa();

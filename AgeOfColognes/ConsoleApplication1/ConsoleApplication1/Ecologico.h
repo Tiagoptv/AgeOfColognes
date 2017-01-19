@@ -2,22 +2,23 @@
 #include "Caracteristica.h"
 #include "Ataca.h"
 
-class Agressao: public Ataca{
+class Ecologico: public Ataca{
 	string nalvo;
 	vector<string> alvos;
+	int nataques;
 public:
-	Agressao(string nser);
+	Ecologico(string nser);
 
-	void verificaSerProximo(Mapa *m, vector<string> *alvos);
+	void verificaEdificioProximo(Mapa *m, vector <string> *alvos);
 
 	void fazCaracterística(Mapa *m);
 
 	int getNataques();
 
 	bool dentroCastelo(Mapa *m);
-	
+
 	void resetNataques(Mapa *m);
 
-	~Agressao();
+	~Ecologico();
 };
 

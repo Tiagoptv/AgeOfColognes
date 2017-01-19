@@ -13,6 +13,13 @@ int Colonia::getMoedas() { return moedas; }
 char Colonia::getNome() { return nomePopulacao; }
 int Colonia::getCor() { return cor; }
 
+Ser* Colonia::getSer(int id) {
+	for (unsigned int i; i < seres.size(); i++) {
+		if (id == seres[i]->getID())
+			return seres[i];
+	}
+}
+
 void Colonia::adicionaSer(Ser *s) {
 	seres.push_back(s);
 }
