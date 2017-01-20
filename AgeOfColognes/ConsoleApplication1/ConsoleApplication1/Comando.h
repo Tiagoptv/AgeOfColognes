@@ -1,4 +1,3 @@
-#pragma once
 #ifndef COMANDO_H
 #define	COMANDO_H
 
@@ -9,10 +8,13 @@
 #include "Edificio.h"
 #include "Colonia.h"
 #include "Mapa.h"
+#include "Consola.h"
+#include "Interface.h"
 
 using namespace std;
 
 class Mapa;
+class Interface;
 
 class Comando
 {
@@ -20,6 +22,7 @@ private:
 	string c1, c2, c3, c4, c5;
 	Mapa *map;
 	Consola c;
+	Interface *i;
 
 public:
 	
@@ -49,6 +52,13 @@ public:
 	//	Vê se a string é um numero
 	//input:	Recebe uma string a verificar
 
+
+	void modoJogo();
+
+
+
+	//--------------------------------------------		FUNÇÕES DE CONFIGURAÇÃO		 --------------------------------------------//
+
 	void dim(Mapa *map, string c2, string c3);
 	//	Define a dimenção da planicie
 	//input:	A FUNCIONAR MAL
@@ -56,10 +66,6 @@ public:
 	void moedas(int m);
 	//	Define a quantidade de moedas iniciais das colonias
 	//input:	POR DETERMINAR
-
-	//void mkgame();
-	//	Inicia o jogo
-	//input:	Não tem input
 
 	void oponentes(int num);
 	//	Define a quantidade de colonias controladas pelo PC; A Colonia do jogador é 'a' e as do PC são 'b', 'c', etc...
@@ -89,14 +95,16 @@ public:
 	void load(string nomefich);
 	//	Carrega os comandos de configuração lendo-os do ficheiro de texto indicado
 	//input:	Recebe o ficheiro a ler
-
+	
 	void inicio();
 	//	Termina a faze de configuração e passa à simulação
 	//input:	Não tem input
 
 	/*Os comandos de simulação que surjam durante a fase de configuração serão ignorados com um breve aviso ao jogador*/
 
-	//--------------------------------------------		FUNÇÕES DE CONFIGURAÇÃO		 --------------------------------------------//
+
+
+	//--------------------------------------------		FUNÇÕES DE SIMULACAO		 --------------------------------------------//
 
 };
 

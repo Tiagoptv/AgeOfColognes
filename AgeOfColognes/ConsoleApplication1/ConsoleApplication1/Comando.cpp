@@ -64,7 +64,6 @@ void Comando::direcionaComando(string cmd1)
 
 Comando::~Comando()
 {
-	cout << "Comando destruido" << endl;
 }
 
 string Comando::getC1() { return c1; }
@@ -83,6 +82,28 @@ bool Comando::isNumber(string s)
 // estudar melhor este bloco de codigo
 // ver se uma parte da string é numero
 
+void Comando::modoJogo()
+{
+	while (1)
+	{
+		c.gotoxy(20, 57);
+
+		string comando;
+		getline(cin, comando);
+		separaComando(comando);
+
+		direcionaComando(c1);
+
+		i->limpaEspacoComandos(c);
+		i->limpaEspacoInfo(c);
+
+		return;
+	}
+}
+
+
+//--------------------------------------------		FUNÇÕES DE CONFIGURAÇÃO		 --------------------------------------------//
+
 void Comando::dim(Mapa *map, string c2, string c3)
 {
 	int l = stoi(c2, nullptr, 10);
@@ -99,7 +120,6 @@ void Comando::moedas(int m){
 		map->getColonias().at(i)->setMoedas(m);
 	}
 }
- 
 
 void Comando::oponentes(int num){
 	char nome = 'b';
@@ -171,4 +191,6 @@ void Comando::inicio() {
 		}
 }
 
+
+//--------------------------------------------		FUNÇÕES DE SIMULACAO		 --------------------------------------------//
 

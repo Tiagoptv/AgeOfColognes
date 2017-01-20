@@ -1,28 +1,38 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <conio.h>
 #include "Edificio.h"
 #include "Castelo.h"
 #include "Terreno.h"
 #include "Consola.h"
 #include "Ser.h"
-#include <conio.h>
 #include "Comando.h"
 #include "Mapa.h"
+#include "Interface.h"
 
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
 using namespace std;
 
-void main() {
+int main() {
+	
+	srand(time(NULL));
+	Interface gui;
+
+	gui.InicioJogo();
+	return 0;
+	
+	//			CODIGO NAO UTILIZADO
+
 	Consola c;
 	Mapa e(c);
 	Terreno a(0, 0);
 	//Castelo f;
 	Ser b(6, 6, 5);
 
-	srand(time(NULL));
+	
 
 	/*int i, j, k, l;
 
@@ -64,7 +74,8 @@ void main() {
 
 	cout << endl;
 
-	//d.castelo(g,6,6);
+	
+	d.castelo(g,6,6);
 	
 	string nperfil;
 
@@ -72,6 +83,5 @@ void main() {
 
 	d.mkperfil(nperfil);
 	
-	//d.mkgame();
 	
 }

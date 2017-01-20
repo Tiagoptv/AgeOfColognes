@@ -22,7 +22,7 @@ string Objeto::getNome()const { return nome; }
 
 void Objeto::desenha(Consola &c, int i, int j) {
 	c.setTextColor(c.AMARELO);
-	c.gotoxy(i, j); 	  cout << (char)219 << (char)219 << (char)219 << (char)219 << (char)219;
+	c.gotoxy(i, j); 	 cout << (char)219 << (char)219 << (char)219 << (char)219 << (char)219;
 	c.gotoxy(i, j + 1);  cout << (char)219 << (char)178 << (char)178 << (char)178 << (char)219;
 	c.gotoxy(i, j + 2);  cout << (char)178 << (char)219 << (char)219 << (char)219 << (char)178;
 	c.gotoxy(i, j + 3);  cout << (char)219 << (char)178 << (char)178 << (char)178 << (char)219;
