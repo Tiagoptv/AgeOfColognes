@@ -25,73 +25,94 @@
     <Filter Include="Source Files\Unidades">
       <UniqueIdentifier>{473465fe-7bfa-4431-9d23-f154d82e1033}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Caracteristicas">
+      <UniqueIdentifier>{f9766781-bf04-4a88-81c8-7a7775cfabb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Edificios">
+      <UniqueIdentifier>{df0cd62f-c537-43e7-ae7d-815b111bbc28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Principal">
+      <UniqueIdentifier>{900de7eb-0aeb-435c-b620-2816b5fe9feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Terreno">
+      <UniqueIdentifier>{39d7249a-8db9-4e31-b3b5-9f5f82ab7ad1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Caracteristicas">
+      <UniqueIdentifier>{08cc2016-8cdf-4c1a-9997-dde054362766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Unidades">
+      <UniqueIdentifier>{fb3129ef-dcda-44b1-82c8-7a3081ea1c41}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Edificio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Castelo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Objeto.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Celula.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Consola.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Terreno.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Colonia.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mapa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Comando.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Perfil.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Caracteristica.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Bandeira.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Superior.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PeleDura.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Armadura.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Faca.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Espada.h">
+    <ClInclude Include="Interface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Agressao.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Caracteristicas</Filter>
     </ClInclude>
-    <ClInclude Include="Walker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Ecologico.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Armadura.h">
+      <Filter>Header Files\Caracteristicas</Filter>
     </ClInclude>
     <ClInclude Include="Ataca.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Bandeira.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Ecologico.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Espada.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="PeleDura.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Walker.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Faca.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Superior.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Castelo.h">
+      <Filter>Header Files\Edificios</Filter>
+    </ClInclude>
+    <ClInclude Include="Edificio.h">
+      <Filter>Header Files\Edificios</Filter>
+    </ClInclude>
+    <ClInclude Include="Celula.h">
+      <Filter>Header Files\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="Colonia.h">
+      <Filter>Header Files\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="Comando.h">
+      <Filter>Header Files\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="Consola.h">
+      <Filter>Header Files\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapa.h">
+      <Filter>Header Files\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="Objeto.h">
+      <Filter>Header Files\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="Terreno.h">
+      <Filter>Header Files\Terreno</Filter>
+    </ClInclude>
+    <ClInclude Include="Caracteristica.h">
+      <Filter>Header Files\Unidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Perfil.h">
+      <Filter>Header Files\Unidades</Filter>
     </ClInclude>
     <ClInclude Include="Ser.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Unidades</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -131,38 +152,41 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files\Principal</Filter>
     </ClCompile>
-    <ClCompile Include="Bandeira.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Ser.cpp">
+      <Filter>Source Files\Unidades</Filter>
     </ClCompile>
-    <ClCompile Include="Superior.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PeleDura.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Armadura.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Faca.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Espada.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Agressao.cpp">
+    <ClCompile Include="Interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Walker.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Superior.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="PeleDura.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Faca.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Espada.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
     <ClCompile Include="Ecologico.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Bandeira.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
     <ClCompile Include="Ataca.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
-    <ClCompile Include="Ser.cpp">
-      <Filter>Source Files\Unidades</Filter>
+    <ClCompile Include="Armadura.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Agressao.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -156,6 +156,7 @@
     <ClInclude Include="Edificio.h" />
     <ClInclude Include="Espada.h" />
     <ClInclude Include="Faca.h" />
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="Mapa.h" />
     <ClInclude Include="Objeto.h" />
     <ClInclude Include="PeleDura.h" />
@@ -180,6 +181,7 @@
     <ClCompile Include="Edificio.cpp" />
     <ClCompile Include="Espada.cpp" />
     <ClCompile Include="Faca.cpp" />
+    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mapa.cpp" />
     <ClCompile Include="Objeto.cpp" />
