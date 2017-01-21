@@ -115,7 +115,10 @@
       <Filter>Header Files\Unidades</Filter>
     </ClInclude>
     <ClInclude Include="Torre.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Edificios</Filter>
+    </ClInclude>
+    <ClInclude Include="Quinta.h">
+      <Filter>Header Files\Edificios</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -192,7 +195,10 @@
       <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
     <ClCompile Include="Torre.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Edificios</Filter>
+    </ClCompile>
+    <ClCompile Include="Quinta.cpp">
+      <Filter>Source Files\Edificios</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

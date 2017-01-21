@@ -2,11 +2,16 @@
 #include "Edificio.h"
 
 
+void Torre::setAtaque(int i) {ataque = i;}
+
+int Torre::getAtaque() const { return ataque; }
+
 Torre::Torre(int x, int y, int cor, int id) : Edificio(x, y, cor) {
 	setID(id);
-	setCusto(0);
-	setSaude(50);
+	setCusto(30);
+	setSaude(20);
 	setDefesa(10);
+	setAtaque(3);
 
 	char c;
 

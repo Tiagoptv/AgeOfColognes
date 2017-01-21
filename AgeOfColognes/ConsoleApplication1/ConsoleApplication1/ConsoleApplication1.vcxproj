@@ -161,6 +161,7 @@
     <ClInclude Include="Objeto.h" />
     <ClInclude Include="PeleDura.h" />
     <ClInclude Include="Perfil.h" />
+    <ClInclude Include="Quinta.h" />
     <ClInclude Include="Ser.h" />
     <ClInclude Include="Superior.h" />
     <ClInclude Include="Terreno.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="Objeto.cpp" />
     <ClCompile Include="PeleDura.cpp" />
     <ClCompile Include="Perfil.cpp" />
+    <ClCompile Include="Quinta.cpp" />
     <ClCompile Include="Ser.cpp" />
     <ClCompile Include="Superior.cpp" />
     <ClCompile Include="Terreno.cpp" />
