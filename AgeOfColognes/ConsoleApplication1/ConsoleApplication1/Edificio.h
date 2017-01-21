@@ -24,13 +24,11 @@ public:
 	void setDefesa(int d);
 
 	//gets
-	int getX() const;
-	int getY() const;
 	int getID() const;
 	int getCusto() const;
 	int getSaude() const;
 	int getDefesa() const;
-	string getInfo();
+	string getInfo() const;
 
 	~Edificio();
 };

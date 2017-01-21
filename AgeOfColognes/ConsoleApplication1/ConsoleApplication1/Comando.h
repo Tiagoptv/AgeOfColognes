@@ -108,7 +108,9 @@ public:
 
 
 
-	void repair(string eid);
+	void repair(string eId);
+
+	void upgrade(string eId);
 };
 
 #endif // !COMANDO_H

@@ -202,10 +202,45 @@ void Comando::repair(string eId) {
 
 	int id;
 	
-	if ( eId.length() == 6 )			id = eId.at(4) * 100 + eId.at(5) * 10 + eId.at(6);
-	else if ( eId.length() == 5 )		id = eId.at(4) * 10 + eId.at(5);
-	else if( eId.length() == 4 )		id = eId.at(4);
+	if (eId.length() == 5)			id = eId.at(3) * 100 + eId.at(4) * 10 + eId.at(5);
+	else if (eId.length() == 4)		id = eId.at(3) * 10 + eId.at(4);
+	else if (eId.length() == 3)		id = eId.at(3);
 
-	map->getColonia('a')->getEdificio(id)->setSaude(100);			//Assumindo que a saude maxima é 100!!
+	if (eId.at(2) == 'c')
+		map->getColonia('a')->getEdificio(id)->setSaude(50);		
+	else 
+		map->getColonia('a')->getEdificio(id)->setSaude(20);
 
+	//dar o return do custo ??
+}
+
+void Comando::upgrade(string eId)
+{
+	int id;
+
+	if (eId.length() == 5)			id = eId.at(3) * 100 + eId.at(4) * 10 + eId.at(5);
+	else if (eId.length() == 4)		id = eId.at(3) * 10 + eId.at(4);
+	else if (eId.length() == 3)		id = eId.at(3);
+
+	if (eId.at(2) == 't') {		//implementar a torre
+
+		//aumentar a defesa
+		map->getColonia('a')->getEdificio(id)->setDefesa( map->getColonia('a')->getEdificio(id)->getDefesa() + 2);
+
+		//aumentar o ataque	--> fazer o set e get Ataque
+		//map->getColonia('a')->getEdificio(id)->seta( map->getColonia('a')->getEdificio(id)->getDefesa() + 1);
+
+	}
+
+	if (eId.at(2) == 'q') {		//implementar a quinta
+
+		//aumentar a defesa
+		map->getColonia('a')->getEdificio(id)->setDefesa( map->getColonia('a')->getEdificio(id)->getDefesa() + 1);
+
+		//aumentar a producao de moedas  -->  criar uma variavel moedaPorInstante
+		//map->getColonia('a')->getEdificio(id)->seta (map->getColonia('a')->getEdificio(id)->getDefesa() + 1);
+
+	}
+
+	//dar o return do custo ??
 }

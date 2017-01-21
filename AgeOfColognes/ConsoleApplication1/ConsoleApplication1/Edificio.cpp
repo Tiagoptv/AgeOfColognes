@@ -16,15 +16,19 @@ void Edificio::setCusto(int c) { custo = c; }
 void Edificio::setDefesa(int d) { defesa = d; }
 void Edificio::setSaude(int s) { saude = s; }
 
-int Edificio::getX() const {return x;}
+
 int Edificio::getID() const {return id;}
 int Edificio::getCusto() const {return custo;}
 int Edificio::getSaude() const {return saude;}
 int Edificio::getDefesa() const {return defesa;}
-string Edificio::getInfo() {
+string Edificio::getInfo() const {
 	ostringstream os;
 
-	os << "ID: " << id << "\tCusto: " << custo << "\tSaude: " << saude << "\tDefesa: " << defesa << endl;
+	if(nome.at(2) == 'c')
+		os << "ID: " << id << "\tCusto: " << custo << "\tSaude: " << saude << "/50\tDefesa: " << defesa << endl;
+	else
+		os << "ID: " << id << "\tCusto: " << custo << "\tSaude: " << saude << "/20\tDefesa: " << defesa << endl;
+
 	return os.str();
 }
 
