@@ -18,6 +18,16 @@ Ser* Colonia::getSer(int id) {
 		if (id == seres[i]->getID())
 			return seres[i];
 	}
+	return nullptr;
+}
+
+Edificio* Colonia::getEdificio(int id)
+{
+	for (unsigned int i; i < edificios.size(); i++) {
+		if (id == edificios[i]->getID())
+			return edificios[i];
+	}
+	return nullptr;
 }
 
 void Colonia::adicionaSer(Ser *s) {

@@ -22,7 +22,7 @@ Interface::~Interface()
 void Interface::InicioJogo()
 {
 	c.setTextSize(13, 13);
-	c.setScreenSize(70, 92);
+	c.setScreenSize(72, 92);
 
 	desenhaGrelhas(c);
 

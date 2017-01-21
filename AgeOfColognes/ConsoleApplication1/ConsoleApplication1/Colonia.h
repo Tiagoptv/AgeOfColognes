@@ -25,6 +25,7 @@ public:
 	char getNome();
 	int getCor();
 	Ser* getSer(int id);
+	Edificio* getEdificio(int id);
 
 	void setMoedas(int num);
 

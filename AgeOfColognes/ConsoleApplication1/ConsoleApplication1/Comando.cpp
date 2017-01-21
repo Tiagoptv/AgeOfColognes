@@ -184,7 +184,6 @@ void Comando::inicio() {
 	}
 	else
 		if (stoi(c2) > 20 && stoi(c3) > 40) {
-			cout << "Mapa pronto para ser criado!" << endl;
 			dim(map, c2, c3);
 			map->preencheMapa(stoi(c2), stoi(c3));
 			map->imprimeMapa();
@@ -192,5 +191,21 @@ void Comando::inicio() {
 }
 
 
+
+
 //--------------------------------------------		FUNÇÕES DE SIMULACAO		 --------------------------------------------//
 
+
+
+
+void Comando::repair(string eId) {
+
+	int id;
+	
+	if ( eId.length() == 6 )			id = eId.at(4) * 100 + eId.at(5) * 10 + eId.at(6);
+	else if ( eId.length() == 5 )		id = eId.at(4) * 10 + eId.at(5);
+	else if( eId.length() == 4 )		id = eId.at(4);
+
+	map->getColonia('a')->getEdificio(id)->setSaude(100);			//Assumindo que a saude maxima é 100!!
+
+}

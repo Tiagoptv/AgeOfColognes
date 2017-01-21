@@ -17,11 +17,19 @@ class Edificio:public Objeto{
 public:
 	Edificio(int x, int y, int cor);
 
+	//sets
 	void setID(int i);
 	void setCusto(int c);
 	void setSaude(int s);
 	void setDefesa(int d);
 
+	//gets
+	int getX() const;
+	int getY() const;
+	int getID() const;
+	int getCusto() const;
+	int getSaude() const;
+	int getDefesa() const;
 	string getInfo();
 
 	~Edificio();

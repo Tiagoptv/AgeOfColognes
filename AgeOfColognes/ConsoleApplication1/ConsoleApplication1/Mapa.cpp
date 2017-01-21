@@ -79,8 +79,8 @@ void Mapa::imprimeMapa(){
 	int posX_cons = 0;
 	int posY_cons = 0;
 
-	for (int i = x; i < (x + 6); i++) {
-		for (int j = y; j < (y + 6); j++) {
+	for (int i = x; i < (x + 10); i++) {
+		for (int j = y; j < (y + 10); j++) {
 			getUltimoObj(i, j)->desenha(c, 4 + posX_cons * 5, 3 + posY_cons * 5);
 			posY_cons++;
 		}

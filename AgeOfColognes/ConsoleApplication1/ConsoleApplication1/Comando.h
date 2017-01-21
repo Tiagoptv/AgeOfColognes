@@ -106,6 +106,9 @@ public:
 
 	//--------------------------------------------		FUNÇÕES DE SIMULACAO		 --------------------------------------------//
 
+
+
+	void repair(string eid);
 };
 
 #endif // !COMANDO_H
