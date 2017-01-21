@@ -218,8 +218,7 @@ void Comando::upgrade(string eId)
 {
 	int id;
 
-	if (eId.length() == 5)			id = eId.at(3) * 100 + eId.at(4) * 10 + eId.at(5);
-	else if (eId.length() == 4)		id = eId.at(3) * 10 + eId.at(4);
+	if (eId.length() == 4)			id = eId.at(3) * 10 + eId.at(4);
 	else if (eId.length() == 3)		id = eId.at(3);
 
 	if (eId.at(2) == 't') {		//implementar a torre
@@ -229,7 +228,8 @@ void Comando::upgrade(string eId)
 
 		//aumentar o ataque	--> fazer o set e get Ataque
 		//map->getColonia('a')->getEdificio(id)->seta( map->getColonia('a')->getEdificio(id)->getDefesa() + 1);
-
+		
+		//falta implementar
 	}
 
 	if (eId.at(2) == 'q') {		//implementar a quinta

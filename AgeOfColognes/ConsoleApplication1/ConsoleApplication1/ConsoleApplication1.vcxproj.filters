@@ -114,6 +114,9 @@
     <ClInclude Include="Ser.h">
       <Filter>Header Files\Unidades</Filter>
     </ClInclude>
+    <ClInclude Include="Torre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Castelo.cpp">
@@ -187,6 +190,9 @@
     </ClCompile>
     <ClCompile Include="Agressao.cpp">
       <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Torre.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

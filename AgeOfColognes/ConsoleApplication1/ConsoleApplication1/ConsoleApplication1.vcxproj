@@ -164,6 +164,7 @@
     <ClInclude Include="Ser.h" />
     <ClInclude Include="Superior.h" />
     <ClInclude Include="Terreno.h" />
+    <ClInclude Include="Torre.h" />
     <ClInclude Include="Walker.h" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +191,7 @@
     <ClCompile Include="Ser.cpp" />
     <ClCompile Include="Superior.cpp" />
     <ClCompile Include="Terreno.cpp" />
+    <ClCompile Include="Torre.cpp" />
     <ClCompile Include="Walker.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

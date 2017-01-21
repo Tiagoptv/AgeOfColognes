@@ -28,17 +28,16 @@ Castelo::Castelo(int x, int y, int cor, int id): Edificio(x,y,cor){
 	string n = ss.str();
 
 	setNome(n);
-
 }
 
 void Castelo::desenha(Consola &c, int i, int j)
 {
 	c.setTextColor(getCor());
-	c.gotoxy(i, j);   cout << (char)19 << (char)19 << (char)19; c.setTextColor(c.AZUL_CLARO); cout << (char)6; c.setTextColor(getCor()); cout << (char)19;
-	c.gotoxy(i, j + 1); cout << (char)186; 	c.setTextColor(c.CINZENTO); cout << (char)219 << (char)219 << (char)219; c.setTextColor(getCor()); cout << (char)186;
-	c.gotoxy(i, j + 2); cout << (char)186; 	c.setTextColor(c.CINZENTO); cout << (char)219;	c.setTextColor(c.VERMELHO); cout << (char)219; c.setTextColor(c.CINZENTO); cout << (char)219;	c.setTextColor(getCor()); cout << (char)186;
-	c.gotoxy(i, j + 3); cout << (char)186; 	c.setTextColor(c.CINZENTO); cout << (char)219; 	c.setTextColor(c.VERMELHO); cout << (char)219;	c.setTextColor(c.CINZENTO); cout << (char)219; 	c.setTextColor(getCor()); cout << (char)186;
-	c.gotoxy(i, j + 4); cout << (char)200;   c.setTextColor(c.BRANCO); /*cout << getNome();*/
+	c.gotoxy(i, j);			cout << (char)19 << (char)19 << (char)19; c.setTextColor(c.AZUL_CLARO); cout << (char)6; c.setTextColor(getCor()); cout << (char)19;
+	c.gotoxy(i, j + 1);		cout << (char)186; 	c.setTextColor(c.CINZENTO); cout << (char)219 << (char)219 << (char)219; c.setTextColor(getCor()); cout << (char)186;
+	c.gotoxy(i, j + 2);		cout << (char)186; 	c.setTextColor(c.CINZENTO); cout << (char)219;	c.setTextColor(c.VERMELHO); cout << (char)219; c.setTextColor(c.CINZENTO); cout << (char)219;	c.setTextColor(getCor()); cout << (char)186;
+	c.gotoxy(i, j + 3);		cout << (char)186; 	c.setTextColor(c.CINZENTO); cout << (char)219; 	c.setTextColor(c.VERMELHO); cout << (char)219;	c.setTextColor(c.CINZENTO); cout << (char)219; 	c.setTextColor(getCor()); cout << (char)186;
+	c.gotoxy(i, j + 4);			c.setTextColor(c.BRANCO); cout << getNome();
 }
 
 
