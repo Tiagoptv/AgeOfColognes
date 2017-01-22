@@ -107,6 +107,7 @@ public:
 	//--------------------------------------------		FUNÇÕES DE SIMULACAO		 --------------------------------------------//
 
 
+	void build(string nome, int lin, int col);
 
 	void repair(string eId);
 

@@ -196,7 +196,36 @@ void Comando::inicio() {
 //--------------------------------------------		FUNÇÕES DE SIMULACAO		 --------------------------------------------//
 
 
+void Comando::build(string nome, int lin, int col) {
 
+	int cor, id;
+
+	if (nome.length() == 4)				id = nome.at(3) * 10 + nome.at(4);
+	else if (nome.length() == 3)		id = nome.at(3);
+
+	if (nome.at(0) == 'A') { cor = 9; }
+	if (nome.at(0) == 'B') { cor = 12; }
+	if (nome.at(0) == 'C') { cor = 14; }
+	if (nome.at(0) == 'D') { cor = 10; }
+
+	
+	if (nome.at(2) == 'c') {
+		Edificio *castelo = new Castelo(lin, col, cor, id);
+		map->getColonia(nome.at(0))->adicionaEdificio(*castelo);
+		map->getColonia(nome.at(0))->getEdificio(id)->desenha(c, lin, col);
+	}
+	else if (nome.at(2) == 't') {
+		Torre *torre = new Torre(lin, col, cor, id);
+		map->getColonia(nome.at(0))->adicionaTorre(*torre);
+		map->getColonia(nome.at(0))->getTorre(id)->desenha(c, lin, col);
+	}
+	else if (nome.at(2) == 'q') {
+		Quinta *quinta = new Quinta(lin, col, cor, id);
+		map->getColonia(nome.at(0))->adicionaQuinta(*quinta);
+		map->getColonia(nome.at(0))->getQuinta(id)->desenha(c, lin, col);
+	}
+	
+}
 
 void Comando::repair(string eId) {
 
@@ -212,59 +241,70 @@ void Comando::repair(string eId) {
 		map->getColonia('a')->getEdificio(id)->setSaude(50);
 
 		//tabelar custo
-		if (saude < 11)
-			map->getColonia('a')->getEdificio(id)->setCusto(custo + 20);
-		else if (saude > 10 && saude < 26)
-			map->getColonia('a')->getEdificio(id)->setCusto(custo + 15);
-		else if (saude > 25 && saude < 41)
-			map->getColonia('a')->getEdificio(id)->setCusto(custo + 10);
-		else if (saude > 40)
-			map->getColonia('a')->getEdificio(id)->setCusto(custo + 5);
+		if (saude < 11) {
+			map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 20 );
+		}
+		else if (saude > 10 && saude < 26) {
+			map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 15);
+		} 
+		else if (saude > 25 && saude < 41) {
+			map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 10);
+		}
+		else if (saude > 40) {
+			map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 5);
+		}
 	}
 
 	else {
 		map->getColonia('a')->getEdificio(id)->setSaude(20);
 
 		//tabelar custo
-		if (saude < 6)
-			map->getColonia('a')->getEdificio(id)->setCusto(custo + 15);
-		else if (saude > 5 && saude < 16)
-			map->getColonia('a')->getEdificio(id)->setCusto(custo + 10);
-		else if (saude > 15)
-			map->getColonia('a')->getEdificio(id)->setCusto(custo + 5);
+		if (saude < 6) {
+			map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 15);
+		}
+		else if (saude > 5 && saude < 16) {
+			map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 10);
+		}
+		else if (saude > 15) {
+			map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 5);
+		}
 	}	
 }
 
 void Comando::upgrade(string eId)
 {
-	int id;
+	int id, moedas, ataque, defesa;
 
 	if (eId.length() == 4)			id = eId.at(3) * 10 + eId.at(4);
 	else if (eId.length() == 3)		id = eId.at(3);
 
-	if (eId.at(2) == 't') {		//implementar a torre
+	
+	if (eId.at(2) == 't') {	
+
+		ataque = map->getColonia('a')->getTorre(id)->getAtaque();
+		defesa = map->getColonia('a')->getTorre(id)->getDefesa();
 
 		//aumentar a defesa
-		map->getColonia('a')->getEdificio(id)->setDefesa( map->getColonia('a')->getEdificio(id)->getDefesa() + 2);
+		map->getColonia('a')->getEdificio(id)->setDefesa( defesa + 2);
 
-		//aumentar o ataque	--> fazer o set e get Ataque
-		//map->getColonia('a')->getEdificio(id)->setAtaque(1);
-		
-		//falta implementar
+		//aumentar o ataque
+		map->getColonia('a')->getTorre(id)->setAtaque(ataque + 1);
 	}
 
-	if (eId.at(2) == 'q') {		//implementar a quinta
+	if (eId.at(2) == 'q') {	
+
+		moedas = map->getColonia('a')->getQuinta(id)->getMoedasInstante();
+		defesa = map->getColonia('a')->getQuinta(id)->getDefesa();
 
 		//aumentar a defesa
-		map->getColonia('a')->getEdificio(id)->setDefesa( map->getColonia('a')->getEdificio(id)->getDefesa() + 1);
+		map->getColonia('a')->getEdificio(id)->setDefesa(defesa + 1);
 
 		//aumentar a producao de moedas  -->  criar uma variavel moedaPorInstante
-		//map->getColonia('a')->getEdificio(id)->seta (map->getColonia('a')->getEdificio(id)->getDefesa() + 1);
+		map->getColonia('a')->getQuinta(id)->setMoedasInstante(moedas + 1);
 
 	}
 
-	//dar o return do custo ??
-	//aumentar custo em 10;
+	map->getColonia('a')->setMoedas(map->getColonia('a')->getMoedas() - 10);
 }
 
 void Comando::sell(string eId)
@@ -280,3 +320,4 @@ void Comando::sell(string eId)
 	//Adiciona o custo calculado às moedas da Colonia
 	map->getColonia('a')->setMoedas( map->getColonia('a')->getMoedas() + custoEdificio );
 }
+
