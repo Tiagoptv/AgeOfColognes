@@ -37,11 +37,10 @@ Torre::Torre(int x, int y, int cor, int id) : Edificio(x, y, cor) {
 void Torre::desenha(Consola &c, int i, int j)
 {
 	c.gotoxy(i, j);		c.setTextColor(getCor());	cout << (char)178 << (char)178; c.setTextColor(c.CINZENTO); cout << (char)219 << (char)219 << (char)219;
-	c.gotoxy(i, j + 1); c.setTextColor(getCor());	cout << (char)178 << (char)178; c.setTextColor(c.CINZENTO); cout << (char)219 << (char)219 << (char)219;
+	c.gotoxy(i, j + 1); c.setTextColor(c.AMARELO);	cout << (char)204 << (char)205 << (char)206 << (char)205 << (char)185;
 	c.gotoxy(i, j + 2); c.setTextColor(c.AMARELO);	cout << (char)204 << (char)205 << (char)206 << (char)205 << (char)185;
-	c.gotoxy(i, j + 3); c.setTextColor(c.ROXO);		cout << (char)177 << (char)177 << (char)177 << (char)177 << (char)177;
+	c.gotoxy(i, j + 3); c.setTextColor(getCor());	cout << (char)177 << (char)177 << (char)177 << (char)177 << (char)177;
 	c.gotoxy(i, j + 4);	c.setTextColor(c.BRANCO);	cout << getNome();
-
 }
 
 Torre::~Torre()

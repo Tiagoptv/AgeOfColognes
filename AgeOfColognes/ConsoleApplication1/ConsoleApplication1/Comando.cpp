@@ -248,7 +248,7 @@ void Comando::upgrade(string eId)
 		map->getColonia('a')->getEdificio(id)->setDefesa( map->getColonia('a')->getEdificio(id)->getDefesa() + 2);
 
 		//aumentar o ataque	--> fazer o set e get Ataque
-		//map->getColonia('a')->getEdificio(id)->s
+		//map->getColonia('a')->getEdificio(id)->setAtaque(1);
 		
 		//falta implementar
 	}
