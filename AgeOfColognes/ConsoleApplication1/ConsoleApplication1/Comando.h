@@ -110,7 +110,9 @@ public:
 
 	void repair(string eId);
 
-	void upgrade(string eId);
+	void upgrade(string eId); 
+
+	void sell(string eId);
 };
 
 #endif // !COMANDO_H

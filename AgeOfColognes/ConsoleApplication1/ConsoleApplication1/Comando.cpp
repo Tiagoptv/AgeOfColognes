@@ -200,18 +200,39 @@ void Comando::inicio() {
 
 void Comando::repair(string eId) {
 
-	int id;
+	int id, saude, custo;
 	
-	if (eId.length() == 5)			id = eId.at(3) * 100 + eId.at(4) * 10 + eId.at(5);
-	else if (eId.length() == 4)		id = eId.at(3) * 10 + eId.at(4);
+	if (eId.length() == 4)			id = eId.at(3) * 10 + eId.at(4);
 	else if (eId.length() == 3)		id = eId.at(3);
 
-	if (eId.at(2) == 'c')
-		map->getColonia('a')->getEdificio(id)->setSaude(50);		
-	else 
+	saude = map->getColonia('a')->getEdificio(id)->getSaude();
+	custo = map->getColonia('a')->getEdificio(id)->getCusto();
+
+	if (eId.at(2) == 'c') {
+		map->getColonia('a')->getEdificio(id)->setSaude(50);
+
+		//tabelar custo
+		if (saude < 11)
+			map->getColonia('a')->getEdificio(id)->setCusto(custo + 20);
+		else if (saude > 10 && saude < 26)
+			map->getColonia('a')->getEdificio(id)->setCusto(custo + 15);
+		else if (saude > 25 && saude < 41)
+			map->getColonia('a')->getEdificio(id)->setCusto(custo + 10);
+		else if (saude > 40)
+			map->getColonia('a')->getEdificio(id)->setCusto(custo + 5);
+	}
+
+	else {
 		map->getColonia('a')->getEdificio(id)->setSaude(20);
 
-	//dar o return do custo ??
+		//tabelar custo
+		if (saude < 6)
+			map->getColonia('a')->getEdificio(id)->setCusto(custo + 15);
+		else if (saude > 5 && saude < 16)
+			map->getColonia('a')->getEdificio(id)->setCusto(custo + 10);
+		else if (saude > 15)
+			map->getColonia('a')->getEdificio(id)->setCusto(custo + 5);
+	}	
 }
 
 void Comando::upgrade(string eId)
@@ -227,7 +248,7 @@ void Comando::upgrade(string eId)
 		map->getColonia('a')->getEdificio(id)->setDefesa( map->getColonia('a')->getEdificio(id)->getDefesa() + 2);
 
 		//aumentar o ataque	--> fazer o set e get Ataque
-		//map->getColonia('a')->getEdificio(id)->seta( map->getColonia('a')->getEdificio(id)->getDefesa() + 1);
+		//map->getColonia('a')->getEdificio(id)->s
 		
 		//falta implementar
 	}
@@ -243,4 +264,19 @@ void Comando::upgrade(string eId)
 	}
 
 	//dar o return do custo ??
+	//aumentar custo em 10;
+}
+
+void Comando::sell(string eId)
+{
+	int id, custoEdificio;
+
+	if (eId.length() == 4)			id = eId.at(3) * 10 + eId.at(4);
+	else if (eId.length() == 3)		id = eId.at(3);
+
+	//Divide o custo total do edificio por 2, moedas é inteiro -> ignora-se as decimas
+	custoEdificio = map->getColonia('a')->getEdificio(id)->getCusto() / 2;
+
+	//Adiciona o custo calculado às moedas da Colonia
+	map->getColonia('a')->setMoedas( map->getColonia('a')->getMoedas() + custoEdificio );
 }
